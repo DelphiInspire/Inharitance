@@ -20,7 +20,7 @@ public:
 
 	coordinates(coordinates&& moveMember)
 	{
-		*this = std::forward<coordinates>(moveMember);
+		*this = std::move(moveMember);
 	}
 	
 	coordinates& operator=(coordinates&& moveMember)
@@ -96,7 +96,7 @@ class Parallelogram : public Body2D
 {
 public:
 	Parallelogram(coordinates&& bottomLeftPos,  coordinates&& topLeftPos,
-				  coordinates&& bottomRightPos, coordinates&& topRightPos)			  
+				  coordinates&& bottomRightPos, coordinates&& topRightPos)
 	{
 		vertices.insert(std::pair<std::string, coordinates>("bottomLeftVertice", bottomLeftPos));
 		vertices.insert(std::pair<std::string, coordinates>("topLeftVertice", topLeftPos));
@@ -168,7 +168,7 @@ public:
 	float calculate_Area() override { return length * width * height; };
 	float calculate_Volume() override { return length * width * height; };
 	float calculate_SurfaceArea() override { return 2.0 * (length * width + length * height + width * height); };
-	coordinates getCenter() { return coordinates(length / 2.0, width / 2.0, height / 2.0); };
+	coordinates getCenter() override{ return coordinates(length / 2.0, width / 2.0, height / 2.0); };
 	~Box() {};
 private:
 	std::vector<coordinates> vertices;
