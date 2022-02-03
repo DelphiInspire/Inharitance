@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.13)
-project(Inharitance)
-set(CMAKE_CXX_STANDARD 14)
-set(SOURCE_FILES main.cpp)
-add_executable(Inharitance  main.cpp Body.cpp)
