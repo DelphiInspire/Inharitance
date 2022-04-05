@@ -2,7 +2,7 @@
 
 int main()
 {
-	Parallelogram par(coordinates(1.0, 9.0), coordinates(-3.0, 6.0), coordinates(3.0, 9.0), coordinates(-1.0, 6.0));
-	const std::vector<const coordinates>* a{ par.getVerteces() };
+	Parallelogram par(coordinates_2D(1.0, 9.0), coordinates_2D(-3.0, 6.0), coordinates_2D(3.0, 9.0), coordinates_2D(-1.0, 6.0));
+    const std::vector<const coordinates_2D>* a{ par.getVerteces() };
 	return 0;
 }
