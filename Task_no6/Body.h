@@ -35,6 +35,7 @@ private:
     std::string error_msg_log{" "};
 };
 
+
 class coordinates_3D
 {
 public:
