@@ -32,7 +32,7 @@ private:
     float y;
     std::initializer_list<float>::iterator input_arg_it;
     const int num_input_params{2};
-    std::string error_msg_log{""};
+    std::string error_msg_log{" "};
 };
 
 class coordinates_3D
